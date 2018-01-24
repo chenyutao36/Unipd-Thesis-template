@@ -1,0 +1,19 @@
+\newcommand{\figl}[3]
+%1=nomefile 2=larghezza 3=didascalia
+{\begin{figure}[tb!]
+ \centering
+ \includegraphics[clip, width=#2\columnwidth]{figures/#1}
+ \caption{#3}
+ \label{#1}
+ \end{figure}
+}
+
+\newcommand{\fig}[2]
+%1=nomefile 2=larghezza
+{\begin{figure}[ht!]
+ \centering
+ \includegraphics[width=#2\columnwidth]{figures/#1}
+ \label{#1}
+ \end{figure}
+}
+

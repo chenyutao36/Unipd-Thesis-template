@@ -1,0 +1,259 @@
+\usepackage[twoside]{geometry}
+\geometry{left=35mm,textwidth=\textwidth,top=42mm,textheight=\textheight}
+
+% Font
+\usepackage[charter]{mathdesign}
+%\usepackage{mathpazo}
+%\usepackage{fouriernc}
+\usepackage{eucal}
+
+%\usepackage{textcomp} % Allows the use of extra characters
+
+% Math support
+
+\usepackage{amsmath, amsthm, adjustbox, subeqnarray, multirow, algorithmic, comment,subfigure}
+\usepackage{mathtools}
+%\usepackage[caption=false,font=footnotesize]{subfig}
+\usepackage{tabularx}
+\usepackage{arydshln}
+\usepackage{appendix}
+\usepackage[chapter]{algorithm}
+\usepackage{listings,xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+\lstset{style=mystyle}
+
+%\setlength\parindent{0pt}
+%\setlength{\parskip}{1em}
+%\usepackage{titlesec}
+%\titlespacing*{\chapter}{0pt}{0\baselineskip}{0.7\baselineskip}
+%\titlespacing*{\section}{0pt}{0.1\baselineskip}{0.1\baselineskip}
+%\titlespacing*{\subsection}{0pt}{0.0\baselineskip}{0.0\baselineskip}
+%\titlespacing*{\subsubsection}{0pt}{0.0\baselineskip}{0.0\baselineskip}
+
+% Tikz
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\tikzstyle{block} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=blue, fill=red!40]
+\tikzstyle{joint} = [circle, minimum width=0.1cm, minimum height=0.1cm, text centered, draw=black, fill=black]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+%\tikzstyle{dot} = [circle, width=0.05cm, height=0.05cm, draw=blue, fill=blue]
+
+%\usepackage[subpreambles=true]{standalone}
+%\usepackage{verbatim, amsmath, amsfonts, amssymb, amsthm}
+
+\theoremstyle{plain}
+% Theorem, Lemma, Corollary, Proposition, Conjecture, Criterion, Algorithm
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+% Definition, Condition, Problem, Example
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{remark}
+% Remark, Note, Notation, Claim, Summary, Acknowledgment, Case, Conclusion
+\newtheorem{remark}[theorem]{Remark}
+
+\renewcommand{\qedsymbol}{\hfill \vrule height 6pt width 6pt depth 0pt \medskip}
+
+% background image for the cover
+\usepackage{eso-pic}
+\newcommand\coverBackground{
+\put(-3,0){
+\parbox[b][\paperheight]{\paperwidth}{%
+\vfill
+\centering
+%\includegraphics{cover.pdf}%
+\includegraphics[width=\paperwidth,height=\paperheight]{copertinatesi.pdf}
+\vfill
+}}}
+
+
+%\usepackage{makeidx} %robustindex % Indexing
+
+% Language
+%\usepackage[italian,english]{babel}
+
+% Captions
+\usepackage[%width=11cm, %
+		font=small, %
+		labelfont=bf, %
+		%format=default%, %
+		justification=justified  %
+		]{caption}
+
+\setlength{\captionmargin}{2em}
+
+% Graphics
+\usepackage{graphicx} 
+%\usepackage[caption=false,format=hang,justification=raggedright]{subfig}	% interacts with the 'caption' package!
+
+% Keeps floats in place (inside the section)
+\usepackage[section,verbose]{placeins} 
+				
+% Fancy header
+\usepackage{fancyhdr} 
+\pagestyle{fancy}
+% with this we ensure that the chapter and section
+% headings are in lowercase.
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{} % delete current setting for header and footer
+\fancyhead[LE,RO]{\bfseries\thepage}
+\fancyhead[LO]{\bfseries \nouppercase \rightmark}
+\fancyhead[RE]{\bfseries \nouppercase \leftmark}
+\renewcommand{\headrulewidth}{0.5pt}	% top rule width
+\renewcommand{\footrulewidth}{0.0pt}		% bottom rule width
+%\renewcommand{\footruleskip}{14mm}
+\addtolength{\headheight}{2.5pt} % make space for the rule
+\addtolength{\headsep}{4mm}
+\addtolength{\textheight}{4mm}  
+\addtolength{\footskip}{7mm} 
+
+\fancypagestyle{plain}{%
+	\fancyhead{} % get rid of headers on plain pages
+	\renewcommand{\headrulewidth}{0pt} % and the line
+	\renewcommand{\footrulewidth}{0pt}
+}
+
+
+% Section heading style
+\usepackage{sectsty} 
+\allsectionsfont{\raggedright} % avoids hyphenation of titles
+\chapterfont{\raggedleft}
+
+%\usepackage[calcwidth]{titlesec}
+%\titleformat{\section}[hang]{\bfseries}
+% {\Large\thesection}{12pt}{\Large}[{\titlerule[0.5pt]}]
+
+% Fancy chapter styles
+%\usepackage[Bjornstrup]{fncychap}
+
+%\usepackage[Sonny]{fncychap}
+%\ChTitleVar{\raggedleft\Large\bfseries}
+
+\usepackage[charter]{quotchap}
+
+% Reset chapter counter in parts
+%\makeatletter
+%\@addtoreset{chapter}{part}
+%\makeatother
+
+% Change line spacing
+\usepackage{setspace}
+%\singlespacing
+\onehalfspacing
+%\doublespacing
+
+% PDF options
+\usepackage{url} % add links to urls
+\usepackage{microtype} % makes pdf look better
+
+% Appendices
+%\usepackage{appendix} 
+%\usepackage{afterpage} % Makes appendices
+
+% Line numbering
+% \usepackage[pagewise]{lineno}
+% \linenumbers
+
+% Table of contents
+%\usepackage[nottoc]{tocbibind}
+\setcounter{secnumdepth}{2} % sections are numbered
+\setcounter{tocdepth}{2} % sections are added to the TOC
+
+% Todo notes
+%\usepackage[textsize=footnotesize]{todonotes}
+
+
+
+% Tikz
+
+%\usepackage{pgf,tikz}
+%\usetikzlibrary{arrows}
+
+%\definecolor{zzzzzz}{rgb}{0.6,0.6,0.6}
+%\definecolor{zzzzzz}{rgb}{0.5,0.5,0.5}
+%\definecolor{ffffff}{rgb}{1,1,1}
+
+
+
+%Colors
+\usepackage{xcolor}
+\definecolor{unipdcolor}{RGB}{179,7,27}
+%\definecolor{unipdcolor}{RGB}{0,0,0}
+%\definecolor{gray}{RGB}{100,100,100}
+%\definecolor{red}{RGB}{255,0,0}
+
+\usepackage[hyperindex=true, %
+  pdftitle={Measure of Nonlinearity in Fast Nonlinearity Model Predictive Control},%
+  pdfauthor={Yutao Chen},%
+  colorlinks=true,%
+  pagebackref=false,%
+  plainpages=false,%
+  pdfpagelabels,%
+  linkcolor=unipdcolor,%
+  citecolor=unipdcolor,%
+  filecolor=unipdcolor,%
+  urlcolor=unipdcolor%
+]{hyperref} % colourlinks=false for printing
+
+% Add a PDF bookmark for the Table of Contents
+\renewcommand{\contentsname}{\pdfbookmark[-1]{Contents}{contents}Contents}
+
+% Fuzz
+% \hfuzz2pt % Don't bother to report over-full boxes if over-edge is < 2pt
+
+% \linenumbers % turns line numbering on
+
+%\usepackage{lipsum}
+
+% Bibliography via natbib
+\usepackage[longnamesfirst]{natbib} 
+%\usepackage[]{natbib} 
+\bibliographystyle{mybibstyle} 
+%\renewcommand{\tocbibname}{References}
+\let\cite\citep
+
+\renewcommand{\bibsection}{%
+\part*{References}%
+\addcontentsline{toc}{part}{References}%
+\markboth{}{References}%
+}
+
+% Fancy arrays, tables, and enumerate
+\usepackage{array}
+\usepackage{booktabs}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+\usepackage{enumerate}
+
+
+
+
+
